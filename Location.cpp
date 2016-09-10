@@ -1,6 +1,5 @@
 #include "Location.h"
 
-
 string Location::getName() {
 	return name;
 }
