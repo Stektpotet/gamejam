@@ -1,22 +1,18 @@
-#pragma once
-#include "Choise.h"
+//#pragma once
+//#include "Choices.h"
 #include <string>
-using std::string;
+using namespace std;
 
 class Location
 {
 public:
 	string getName();
-	Location(string name, int id);
-	getCurrentChoises();
-	
+	Location(string locationName, int locationId);
+	void setName(string t);
+
 
 private:
 	int id;
 	string name;
-	Choice choices[] = {
-		{ "travelToOslo", initOslo },
-		{ "travelToBergen", initBergen }
 
-	}
 };

@@ -1,17 +1,16 @@
 #include "Location.h"
 
-string Location::getName()
-{
+
+string Location::getName() {
 	return name;
 }
 
-Location::Location(string n, int ID)
-{
-	name = n;
-	id = ID;
+void Location::setName(string t) {
+	name = t;
 }
 
-Location::getCurrentChoises()
-{
-
-}
+ Location::Location(string locationName, int locationId)
+ {
+ 	name = locationName;
+ 	id = locationId;
+ }
