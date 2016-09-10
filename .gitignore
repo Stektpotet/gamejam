@@ -12,4 +12,6 @@
 *.vcxproj.filters
 *.sdf
 main
-
+
+Debug/*
+*/Debug
