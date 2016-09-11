@@ -22,25 +22,20 @@ void Fight(int i)
 int main()
 {
 	//This is how choices will be controlled
-	Choices choiceManager;
 	//This is how you set the choices 
-	choiceManager.setChoice(0, "Run1", RunAway);
-	choiceManager.setChoice(1, "Run2", RunAway);
-	choiceManager.setChoice(2, "Run3", RunAway);
-	choiceManager.setChoice(3, "Run4", RunAway);
-	choiceManager.setChoice(4, "Run5", RunAway);
-	
-	Choice* p = choiceManager.all();
+	choiceManager.add("Run1", RunAway);
+	choiceManager.add("Run2", RunAway);
+	choiceManager.add("Run3", RunAway);
 
 	cout << "Chose an action: \n";
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < choiceManager.size(); i++)
 	{
-		cout << "#" << i << ": " << p[i].decsription << "\n";
+		cout << "#" << i << ": " << choiceManager.getChoice(i).decsription << "\n";
 	}
 	
 	int i = 3;
 	cin >> i;
-	p[i].callback(i);
+	choiceManager.getChoice(i).callback(i);
 
 	return 0;
 
