@@ -1,10 +1,11 @@
 #pragma once
-#include "Character.h"
+#include "CombatCharacter.h"
 
-class Player : Character
+//Other than stats, all combatcharacters would have inventory, no? TODO
+class Player : CombatCharacter
 {
 private:
-	int inventory[]; //
+	int inventory[]; //all enemies would potentially have weapons too, no?
 
 public:
 	//Each stat can have a value between 0-10, a player has to split his 20(?) points into stats
